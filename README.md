@@ -29,7 +29,7 @@
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
-   git clone https://git.openwrt.org/openwrt/openwrt.git
+   git clone https://github.com/cfwvip/openwrt.git
    sudo chmod R 777 openwrt 
    cd openwrt
    ./scripts/feeds update -a
