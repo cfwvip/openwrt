@@ -30,7 +30,8 @@
 
    ```bash
    git clone https://git.openwrt.org/openwrt/openwrt.git
-   cd lede
+   sudo chmod R 777 openwrt 
+   cd openwrt
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
