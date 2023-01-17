@@ -10,7 +10,7 @@
 2. TG 讨论群： 
 ## 注意
 1. **不要用 root 用户进行编译**
-2. 国内用户编译前最好准备好梯子
+2. 国内用户编译前最好准备好梯子，或者使用国外云主机编译
 3. 默认登陆IP 192.168.1.1 密码 password
 ## 编译命令
 
@@ -18,17 +18,14 @@
 
 2. 安装编译依赖
 
-   ```bash
-   sudo apt update -y
-   sudo apt full-upgrade -y
-   sudo apt install -y ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential \
+```
+sudo apt install -y ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential \
    bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \
    git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \
    libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \
    mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip libpython3-dev qemu-utils \
    rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
-   ```
-
+```
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
@@ -75,6 +72,7 @@ make V=s -j$(nproc)
 
 ### 如果你使用 WSL/WSL2 进行编译
 
+建议安装kali-linux通过kex --esm 启动窗口进入系统后编译，或者你也可以按照下面步骤编译
 由于 WSL 的 PATH 中包含带有空格的 Windows 路径，有可能会导致编译失败，请在 `make` 前面加上：
 
 ```bash
@@ -134,17 +132,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
  ![star](doc/star.png) 
 
-## Download
 
-Built firmware images are available for many architectures and come with a
-package selection to be used as WiFi home router. To quickly find a factory
-image usable to migrate from a vendor stock firmware to OpenWrt, try the
-*Firmware Selector*.
-
-* [OpenWrt Firmware Selector](https://firmware-selector.openwrt.org/)
-
-If your device is supported, please follow the **Info** link to see install
-instructions or consult the support resources listed below.
 
 ## 
 
@@ -165,10 +153,7 @@ distributions. A complete list with distribution specific packages is found in
 the [Build System Setup](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem)
 documentation.
 
-```
-binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev
-make4.1+ perl python3.6+ rsync subversion unzip which
-```
+
 
 ### Quickstart
 
